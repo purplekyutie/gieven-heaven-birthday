@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#392044">
+
+  <title>RSVP | Gieven & Heaven</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      G <span>&</span> H
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="invitation.html">Invitation</a>
+      <a href="rsvp.html" class="active">RSVP</a>
+      <a href="location.html">Location</a>
+    </nav>
+  </header>
+
+  <!-- RSVP PAGE -->
+  <main class="inner-page rsvp-page">
+
+    <div class="section-heading">
+      <p class="eyebrow">WE HOPE YOU CAN JOIN US</p>
+
+      <h1>Kindly RSVP</h1>
+
+      <p>
+        Please let us know if you'll be celebrating
+        with us.
+      </p>
+    </div>
+
+    <!-- RSVP FORM -->
+    <form class="rsvp-card" id="rsvpForm">
+
+      <div class="form-intro">
+        <span class="mini-crown">♛</span>
+
+        <h2>Attendance Confirmation</h2>
+
+        <p>
+          Gieven & Heaven's Birthday
+          · December 13, 2026
+        </p>
+      </div>
+
+      <!-- REPRESENTATIVE NAME -->
+      <label for="representativeName">
+        Representative Name
+      </label>
+
+      <input
+        id="representativeName"
+        name="representativeName"
+        type="text"
+        placeholder="Enter your full name"
+        autocomplete="name"
+        required
+      >
+
+      <!-- NUMBER OF GUESTS -->
+      <label for="guestCount">
+        Number of Guests
+        <span class="hint">
+          (including representative)
+        </span>
+      </label>
+
+      <div class="number-control">
+
+        <button
+          type="button"
+          class="step-btn"
+          id="minusGuest"
+          aria-label="Decrease guests"
+        >
+          −
+        </button>
+
+        <input
+          id="guestCount"
+          name="guestCount"
+          type="number"
+          min="1"
+          max="20"
+          value="1"
+          required
+        >
+
+        <button
+          type="button"
+          class="step-btn"
+          id="plusGuest"
+          aria-label="Increase guests"
+        >
+          +
+        </button>
+
+      </div>
+
+      <!-- GUEST NAMES -->
+      <div
+        id="guestNameFields"
+        class="guest-fields"
+      ></div>
+
+      <!-- ATTENDANCE -->
+      <fieldset>
+
+        <legend>
+          Will you be attending?
+        </legend>
+
+        <label class="choice">
+
+          <input
+            type="radio"
+            name="attendance"
+            value="Yes"
+            required
+          >
+
+          <span class="choice-mark"></span>
+
+          <span>
+            <strong>
+              Yes, I'll be there!
+            </strong>
+
+            <small>
+              Looking forward to celebrating.
+            </small>
+          </span>
+
+        </label>
+
+        <label class="choice">
+
+          <input
+            type="radio"
+            name="attendance"
+            value="No"
+          >
+
+          <span class="choice-mark"></span>
+
+          <span>
+            <strong>
+              Sorry, I can't attend.
+            </strong>
+
+            <small>
+              Sending our warm wishes.
+            </small>
+          </span>
+
+        </label>
+
+      </fieldset>
+
+      <!-- SUBMIT BUTTON -->
+      <button
+        class="primary-btn submit-btn"
+        type="submit"
+      >
+        SUBMIT RSVP
+        <span>→</span>
+      </button>
+
+      <p class="form-note">
+        Thank you for taking the time to respond.
+      </p>
+
+      <!-- RESPONSE MESSAGE -->
+      <div
+        id="responseMessage"
+        class="response-message"
+        role="status"
+        aria-live="polite"
+      ></div>
+
+    </form>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>G & H</span>
+    · Made with love for Gieven & Heaven
+    · 2026
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
